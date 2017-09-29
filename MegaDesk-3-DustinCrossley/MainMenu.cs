@@ -16,5 +16,12 @@ namespace MegaDesk_3_DustinCrossley
         {
             InitializeComponent();
         }
+
+        private void btnNewQuote_Click(object sender, EventArgs e)
+        {
+            AddQuote NewQuote = new AddQuote(this);
+            NewQuote.Show();
+            this.Hide();
+        }
     }
 }

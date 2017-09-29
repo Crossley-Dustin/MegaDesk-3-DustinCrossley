@@ -42,6 +42,7 @@
             this.btnNewQuote.TabIndex = 0;
             this.btnNewQuote.Text = "Add New Quote";
             this.btnNewQuote.UseVisualStyleBackColor = true;
+            this.btnNewQuote.Click += new System.EventHandler(this.btnNewQuote_Click);
             // 
             // btnViewQuotes
             // 

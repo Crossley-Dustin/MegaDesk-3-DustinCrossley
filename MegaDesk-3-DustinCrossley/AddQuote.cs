@@ -12,9 +12,18 @@ namespace MegaDesk_3_DustinCrossley
 {
     public partial class AddQuote : Form
     {
-        public AddQuote()
+        Form MainMenu;
+
+        public AddQuote(Form MainMenuForm)
         {
             InitializeComponent();
+            MainMenu = MainMenuForm;
+        }
+
+        private void btnReturnToMainMenu_Click(object sender, EventArgs e)
+        {
+            MainMenu.Show();
+            this.Close();
         }
     }
 }
