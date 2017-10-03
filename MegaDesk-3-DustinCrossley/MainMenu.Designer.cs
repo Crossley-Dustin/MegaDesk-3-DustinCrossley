@@ -36,9 +36,10 @@
             // 
             // btnNewQuote
             // 
-            this.btnNewQuote.Location = new System.Drawing.Point(68, 29);
+            this.btnNewQuote.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNewQuote.Location = new System.Drawing.Point(43, 33);
             this.btnNewQuote.Name = "btnNewQuote";
-            this.btnNewQuote.Size = new System.Drawing.Size(148, 50);
+            this.btnNewQuote.Size = new System.Drawing.Size(339, 50);
             this.btnNewQuote.TabIndex = 0;
             this.btnNewQuote.Text = "Add New Quote";
             this.btnNewQuote.UseVisualStyleBackColor = true;
@@ -46,18 +47,21 @@
             // 
             // btnViewQuotes
             // 
-            this.btnViewQuotes.Location = new System.Drawing.Point(68, 97);
+            this.btnViewQuotes.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnViewQuotes.Location = new System.Drawing.Point(43, 101);
             this.btnViewQuotes.Name = "btnViewQuotes";
-            this.btnViewQuotes.Size = new System.Drawing.Size(148, 50);
+            this.btnViewQuotes.Size = new System.Drawing.Size(339, 50);
             this.btnViewQuotes.TabIndex = 1;
             this.btnViewQuotes.Text = "View Quotes";
             this.btnViewQuotes.UseVisualStyleBackColor = true;
+            this.btnViewQuotes.Click += new System.EventHandler(this.BtnViewQuotes_Click);
             // 
             // btnSearchQuotes
             // 
-            this.btnSearchQuotes.Location = new System.Drawing.Point(68, 166);
+            this.btnSearchQuotes.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearchQuotes.Location = new System.Drawing.Point(43, 166);
             this.btnSearchQuotes.Name = "btnSearchQuotes";
-            this.btnSearchQuotes.Size = new System.Drawing.Size(148, 50);
+            this.btnSearchQuotes.Size = new System.Drawing.Size(339, 50);
             this.btnSearchQuotes.TabIndex = 2;
             this.btnSearchQuotes.Text = "Search Quotes";
             this.btnSearchQuotes.UseVisualStyleBackColor = true;
@@ -65,18 +69,20 @@
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(68, 239);
+            this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExit.Location = new System.Drawing.Point(43, 231);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(148, 50);
+            this.btnExit.Size = new System.Drawing.Size(339, 50);
             this.btnExit.TabIndex = 3;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.BtnExit_Click);
             // 
             // MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(524, 328);
+            this.ClientSize = new System.Drawing.Size(428, 328);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnSearchQuotes);
             this.Controls.Add(this.btnViewQuotes);

@@ -2,18 +2,18 @@
 
 namespace MegaDesk_3_DustinCrossley
 {
-    class DeskQuote
+    public class DeskQuote
     {
         
         public string CustomerName { get; set; }
         public RushDays RushOrderDays { get; set; }
 
-        private Desk Desk = new Desk();
-        private  decimal _QuoteAmount { get; set; }
-        private DateTime _QuoteDate { get; set; }
+        public Desk Desk = new Desk();
         private const decimal BASE_PRICE = 200;
         private const decimal PER_DRAWER_PRICE = 50;
-        
+
+        public decimal QuoteAmount { get; set; }
+        public DateTime QuoteDate { get; set; }
         public const int MIN_WIDTH = 24;
         public const int MAX_WIDTH = 96;
         public const int MIN_DEPTH = 12;
@@ -24,8 +24,8 @@ namespace MegaDesk_3_DustinCrossley
 
         //private const decimal 
 
-        public decimal QuoteAmount {get { return _QuoteAmount; }}
-        public DateTime QuoteDate {get { return _QuoteDate; }}
+        //public decimal QuoteAmount {get { return _QuoteAmount; }}
+        //public DateTime QuoteDate {get { return _QuoteDate; }}
 
         public enum RushDays
         {
@@ -35,14 +35,11 @@ namespace MegaDesk_3_DustinCrossley
             Seven = 7         
         }
 
-        public void CalculateDeskQuote(Desk DeskDetails)
+        public void CalculateDeskQuote()
         {
-            // Set desk details.
-            Desk = DeskDetails;
-
             // Updates the QuoteAmount and QuoteDate
-            _QuoteAmount = BASE_PRICE + LargeDeskPrice() + DrawerPrice() + SurfacePrice() + RushOrderPrice();
-            _QuoteDate = DateTime.Now;
+            QuoteAmount = BASE_PRICE + LargeDeskPrice() + DrawerPrice() + SurfacePrice() + RushOrderPrice();
+            QuoteDate = DateTime.Now;
         }
 
         private decimal DrawerPrice()
@@ -62,6 +59,10 @@ namespace MegaDesk_3_DustinCrossley
 
         private decimal RushOrderPrice()
         {
+
+            if (RushOrderDays == RushDays.None)
+                return 0;
+
             // Returns cost of rush order.
             if (Desk.Area < 1000)
             {
@@ -74,7 +75,7 @@ namespace MegaDesk_3_DustinCrossley
                     case RushDays.Seven:
                         return 30;
                     default:
-                        return 99999;
+                        return 9999999;
                 }
             }
             else if (Desk.Area >= 1000 && Desk.Area <= 2000)
@@ -88,7 +89,7 @@ namespace MegaDesk_3_DustinCrossley
                     case RushDays.Seven:
                         return 35;
                     default:
-                        return 99999;
+                        return 9999999;
                 }
             }
             else
@@ -102,7 +103,7 @@ namespace MegaDesk_3_DustinCrossley
                     case RushDays.Seven:
                         return 40;
                     default:
-                        return 99999;
+                        return 9999999;
                 }
             }
         }
@@ -123,7 +124,7 @@ namespace MegaDesk_3_DustinCrossley
                 case Desk.SurfaceType.Veneer:
                     return 125;
                 default:
-                    return 99999;
+                    return 9999999;
             }
         }
     }

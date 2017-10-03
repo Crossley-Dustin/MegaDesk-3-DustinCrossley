@@ -23,5 +23,17 @@ namespace MegaDesk_3_DustinCrossley
             SearchQuote.Show();
             this.Hide();
         }
+
+        private void BtnExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void BtnViewQuotes_Click(object sender, EventArgs e)
+        {
+            ViewAllQuotes ViewAll = new ViewAllQuotes(this);
+            ViewAll.Show();
+            this.Hide();
+        }
     }
 }

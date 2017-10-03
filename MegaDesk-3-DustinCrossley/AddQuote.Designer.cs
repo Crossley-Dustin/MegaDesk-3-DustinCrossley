@@ -50,10 +50,11 @@
             // btnReturnToMainMenu
             // 
             this.btnReturnToMainMenu.AutoSize = true;
-            this.btnReturnToMainMenu.Location = new System.Drawing.Point(447, 345);
+            this.btnReturnToMainMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReturnToMainMenu.Location = new System.Drawing.Point(56, 447);
             this.btnReturnToMainMenu.Name = "btnReturnToMainMenu";
-            this.btnReturnToMainMenu.Size = new System.Drawing.Size(183, 47);
-            this.btnReturnToMainMenu.TabIndex = 0;
+            this.btnReturnToMainMenu.Size = new System.Drawing.Size(425, 50);
+            this.btnReturnToMainMenu.TabIndex = 7;
             this.btnReturnToMainMenu.Text = "Cancel and Return to Menu";
             this.btnReturnToMainMenu.UseVisualStyleBackColor = true;
             this.btnReturnToMainMenu.Click += new System.EventHandler(this.BtnReturnToMainMenu_Click);
@@ -61,35 +62,35 @@
             // tbCustomerName
             // 
             this.tbCustomerName.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbCustomerName.Location = new System.Drawing.Point(210, 25);
+            this.tbCustomerName.Location = new System.Drawing.Point(231, 25);
             this.tbCustomerName.MaximumSize = new System.Drawing.Size(300, 50);
             this.tbCustomerName.MinimumSize = new System.Drawing.Size(250, 30);
             this.tbCustomerName.Name = "tbCustomerName";
             this.tbCustomerName.Size = new System.Drawing.Size(250, 32);
-            this.tbCustomerName.TabIndex = 1;
+            this.tbCustomerName.TabIndex = 0;
             this.tbCustomerName.WordWrap = false;
             // 
             // tbDeskWidth
             // 
             this.tbDeskWidth.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbDeskWidth.Location = new System.Drawing.Point(210, 80);
-            this.tbDeskWidth.MaximumSize = new System.Drawing.Size(100, 50);
-            this.tbDeskWidth.MinimumSize = new System.Drawing.Size(100, 30);
+            this.tbDeskWidth.Location = new System.Drawing.Point(231, 80);
+            this.tbDeskWidth.MaximumSize = new System.Drawing.Size(250, 50);
+            this.tbDeskWidth.MinimumSize = new System.Drawing.Size(200, 30);
             this.tbDeskWidth.Name = "tbDeskWidth";
-            this.tbDeskWidth.Size = new System.Drawing.Size(100, 32);
-            this.tbDeskWidth.TabIndex = 2;
+            this.tbDeskWidth.Size = new System.Drawing.Size(250, 32);
+            this.tbDeskWidth.TabIndex = 1;
             this.tbDeskWidth.WordWrap = false;
             this.tbDeskWidth.Validating += new System.ComponentModel.CancelEventHandler(this.TbDeskWidth_Validating);
             // 
             // tbDeskDepth
             // 
             this.tbDeskDepth.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbDeskDepth.Location = new System.Drawing.Point(210, 135);
-            this.tbDeskDepth.MaximumSize = new System.Drawing.Size(100, 50);
-            this.tbDeskDepth.MinimumSize = new System.Drawing.Size(100, 30);
+            this.tbDeskDepth.Location = new System.Drawing.Point(231, 135);
+            this.tbDeskDepth.MaximumSize = new System.Drawing.Size(300, 50);
+            this.tbDeskDepth.MinimumSize = new System.Drawing.Size(200, 30);
             this.tbDeskDepth.Name = "tbDeskDepth";
-            this.tbDeskDepth.Size = new System.Drawing.Size(100, 32);
-            this.tbDeskDepth.TabIndex = 3;
+            this.tbDeskDepth.Size = new System.Drawing.Size(250, 32);
+            this.tbDeskDepth.TabIndex = 2;
             this.tbDeskDepth.WordWrap = false;
             this.tbDeskDepth.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TbDeskDepth_KeyPress);
             this.tbDeskDepth.Validating += new System.ComponentModel.CancelEventHandler(this.TbDeskDepth_Validating);
@@ -106,10 +107,10 @@
             "3",
             "5",
             "7"});
-            this.cmbRushDays.Location = new System.Drawing.Point(210, 298);
+            this.cmbRushDays.Location = new System.Drawing.Point(231, 298);
             this.cmbRushDays.Name = "cmbRushDays";
-            this.cmbRushDays.Size = new System.Drawing.Size(100, 33);
-            this.cmbRushDays.TabIndex = 4;
+            this.cmbRushDays.Size = new System.Drawing.Size(250, 33);
+            this.cmbRushDays.TabIndex = 5;
             // 
             // cmbNumDrawers
             // 
@@ -127,17 +128,17 @@
             "5",
             "6",
             "7"});
-            this.cmbNumDrawers.Location = new System.Drawing.Point(210, 190);
+            this.cmbNumDrawers.Location = new System.Drawing.Point(231, 190);
             this.cmbNumDrawers.MaxDropDownItems = 24;
             this.cmbNumDrawers.Name = "cmbNumDrawers";
-            this.cmbNumDrawers.Size = new System.Drawing.Size(100, 33);
-            this.cmbNumDrawers.TabIndex = 5;
+            this.cmbNumDrawers.Size = new System.Drawing.Size(250, 33);
+            this.cmbNumDrawers.TabIndex = 3;
             // 
             // lblCustomerName
             // 
             this.lblCustomerName.AutoSize = true;
             this.lblCustomerName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCustomerName.Location = new System.Drawing.Point(31, 29);
+            this.lblCustomerName.Location = new System.Drawing.Point(52, 29);
             this.lblCustomerName.Name = "lblCustomerName";
             this.lblCustomerName.Size = new System.Drawing.Size(147, 24);
             this.lblCustomerName.TabIndex = 6;
@@ -147,27 +148,27 @@
             // 
             this.lblDeskWidth.AutoSize = true;
             this.lblDeskWidth.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDeskWidth.Location = new System.Drawing.Point(31, 85);
+            this.lblDeskWidth.Location = new System.Drawing.Point(52, 85);
             this.lblDeskWidth.Name = "lblDeskWidth";
-            this.lblDeskWidth.Size = new System.Drawing.Size(105, 24);
+            this.lblDeskWidth.Size = new System.Drawing.Size(137, 24);
             this.lblDeskWidth.TabIndex = 7;
-            this.lblDeskWidth.Text = "Desk Width";
+            this.lblDeskWidth.Text = "Desk Width (in)";
             // 
             // lblDeskDepth
             // 
             this.lblDeskDepth.AutoSize = true;
             this.lblDeskDepth.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDeskDepth.Location = new System.Drawing.Point(31, 141);
+            this.lblDeskDepth.Location = new System.Drawing.Point(52, 141);
             this.lblDeskDepth.Name = "lblDeskDepth";
-            this.lblDeskDepth.Size = new System.Drawing.Size(107, 24);
+            this.lblDeskDepth.Size = new System.Drawing.Size(139, 24);
             this.lblDeskDepth.TabIndex = 8;
-            this.lblDeskDepth.Text = "Desk Depth";
+            this.lblDeskDepth.Text = "Desk Depth (in)";
             // 
             // lblNumDrawers
             // 
             this.lblNumDrawers.AutoSize = true;
             this.lblNumDrawers.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNumDrawers.Location = new System.Drawing.Point(31, 197);
+            this.lblNumDrawers.Location = new System.Drawing.Point(52, 197);
             this.lblNumDrawers.Name = "lblNumDrawers";
             this.lblNumDrawers.Size = new System.Drawing.Size(173, 24);
             this.lblNumDrawers.TabIndex = 9;
@@ -177,18 +178,19 @@
             // 
             this.lblRushOrder.AutoSize = true;
             this.lblRushOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRushOrder.Location = new System.Drawing.Point(31, 303);
+            this.lblRushOrder.Location = new System.Drawing.Point(52, 303);
             this.lblRushOrder.Name = "lblRushOrder";
-            this.lblRushOrder.Size = new System.Drawing.Size(108, 24);
+            this.lblRushOrder.Size = new System.Drawing.Size(164, 24);
             this.lblRushOrder.TabIndex = 10;
-            this.lblRushOrder.Text = "Rush Order";
+            this.lblRushOrder.Text = "Rush Order (days)";
             // 
             // btnSaveQuote
             // 
-            this.btnSaveQuote.Location = new System.Drawing.Point(447, 292);
+            this.btnSaveQuote.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSaveQuote.Location = new System.Drawing.Point(56, 378);
             this.btnSaveQuote.Name = "btnSaveQuote";
-            this.btnSaveQuote.Size = new System.Drawing.Size(183, 47);
-            this.btnSaveQuote.TabIndex = 14;
+            this.btnSaveQuote.Size = new System.Drawing.Size(425, 50);
+            this.btnSaveQuote.TabIndex = 6;
             this.btnSaveQuote.Text = "Save Quote and Return to Menu";
             this.btnSaveQuote.UseVisualStyleBackColor = true;
             this.btnSaveQuote.Click += new System.EventHandler(this.BtnSaveQuote_Click);
@@ -201,7 +203,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(31, 250);
+            this.label1.Location = new System.Drawing.Point(52, 250);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(144, 24);
             this.label1.TabIndex = 16;
@@ -220,17 +222,17 @@
             "Pine",
             "Rosewood",
             "Veneer"});
-            this.cmbSurfaceMaterial.Location = new System.Drawing.Point(210, 243);
+            this.cmbSurfaceMaterial.Location = new System.Drawing.Point(231, 243);
             this.cmbSurfaceMaterial.MaxDropDownItems = 24;
             this.cmbSurfaceMaterial.Name = "cmbSurfaceMaterial";
-            this.cmbSurfaceMaterial.Size = new System.Drawing.Size(100, 33);
-            this.cmbSurfaceMaterial.TabIndex = 15;
+            this.cmbSurfaceMaterial.Size = new System.Drawing.Size(250, 33);
+            this.cmbSurfaceMaterial.TabIndex = 4;
             // 
             // AddQuote
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(658, 418);
+            this.ClientSize = new System.Drawing.Size(533, 524);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cmbSurfaceMaterial);
             this.Controls.Add(this.btnSaveQuote);

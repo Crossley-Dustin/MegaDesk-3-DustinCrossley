@@ -8,7 +8,7 @@ namespace MegaDesk_3_DustinCrossley
     public partial class AddQuote : Form
     {
         Form frmMainMenu;
-        Desk DeskDetails = new Desk();
+        //Desk DeskDetails = new Desk();
         DeskQuote DQuote = new DeskQuote();
         private const string FILE_NAME = "quotes.txt";
 
@@ -31,22 +31,22 @@ namespace MegaDesk_3_DustinCrossley
         {
             // Grab all values and generate the price quote
 
-            DeskDetails.Width = int.Parse(tbDeskWidth.Text);
-            DeskDetails.Depth = int.Parse(tbDeskDepth.Text);
-            DeskDetails.DrawerCount = Convert.ToInt32(cmbNumDrawers.SelectedItem);
+            DQuote.Desk.Width = int.Parse(tbDeskWidth.Text);
+            DQuote.Desk.Depth = int.Parse(tbDeskDepth.Text);
+            DQuote.Desk.DrawerCount = Convert.ToInt32(cmbNumDrawers.SelectedItem);
             string selectedComboSurface = cmbSurfaceMaterial.SelectedItem.ToString();
             bool comboSurfaceConverted;
             comboSurfaceConverted = Enum.TryParse(selectedComboSurface, out Desk.SurfaceType selectedSurface);
             if (comboSurfaceConverted)
             {
-                DeskDetails.Surface = selectedSurface;
+                DQuote.Desk.Surface = selectedSurface;
             }
             
             DQuote.CustomerName = tbCustomerName.Text;
             DQuote.RushOrderDays = (DeskQuote.RushDays)Convert.ToInt32(cmbRushDays.SelectedItem.ToString());
 
             // Calculate the quote
-            DQuote.CalculateDeskQuote(DeskDetails);
+            DQuote.CalculateDeskQuote();
 
             // Save details to file
             SaveToQuoteFile();
@@ -245,22 +245,27 @@ namespace MegaDesk_3_DustinCrossley
 
             try
             {
+                // Field order:
+                // CustomerName, QuoteDate, QuoteAmount, RushOrderDays, DeskWidth, DeskDepth, DeskDrawerCount, DeskSurfaceMaterial
+
                 const string FieldDelimiter = ",";
                 StreamWriter writer;
                 writer = new StreamWriter(FILE_NAME, append:true);
                 writer.WriteLine
                 (
-                    DQuote.CustomerName 
+                    DQuote.CustomerName
                     + FieldDelimiter + DQuote.QuoteDate
-                    + FieldDelimiter + DQuote.QuoteAmount 
-                    + FieldDelimiter + DQuote.RushOrderDays
-                    + FieldDelimiter + DeskDetails.Width
-                    + FieldDelimiter + DeskDetails.Depth
-                    + FieldDelimiter + DeskDetails.DrawerCount
-                    + FieldDelimiter + DeskDetails.Surface.ToString()
+                    + FieldDelimiter + DQuote.QuoteAmount
+                    + FieldDelimiter + (int)DQuote.RushOrderDays
+                    + FieldDelimiter + DQuote.Desk.Width
+                    + FieldDelimiter + DQuote.Desk.Depth
+                    + FieldDelimiter + DQuote.Desk.DrawerCount
+                    + FieldDelimiter + DQuote.Desk.Surface.ToString()
                );
 
+                // Clean up.
                 writer.Close();
+                writer.Dispose();
             }
             catch (Exception)
             {

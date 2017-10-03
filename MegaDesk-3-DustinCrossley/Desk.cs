@@ -1,7 +1,7 @@
 ﻿
 namespace MegaDesk_3_DustinCrossley
 {
-    class Desk
+    public class Desk
     {
         public int Width { get; set; }
         public int Depth { get; set; }
