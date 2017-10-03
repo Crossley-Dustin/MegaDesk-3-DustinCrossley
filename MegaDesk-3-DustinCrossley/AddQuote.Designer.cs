@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btnReturnToMainMenu = new System.Windows.Forms.Button();
             this.tbCustomerName = new System.Windows.Forms.TextBox();
             this.tbDeskWidth = new System.Windows.Forms.TextBox();
@@ -39,150 +40,200 @@
             this.lblDeskDepth = new System.Windows.Forms.Label();
             this.lblNumDrawers = new System.Windows.Forms.Label();
             this.lblRushOrder = new System.Windows.Forms.Label();
-            this.lblCustomerNameValidateMsg = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.btnSaveQuote = new System.Windows.Forms.Button();
+            this.ErrProv_DeskQuote = new System.Windows.Forms.ErrorProvider(this.components);
+            this.label1 = new System.Windows.Forms.Label();
+            this.cmbSurfaceMaterial = new System.Windows.Forms.ComboBox();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrProv_DeskQuote)).BeginInit();
             this.SuspendLayout();
             // 
             // btnReturnToMainMenu
             // 
             this.btnReturnToMainMenu.AutoSize = true;
-            this.btnReturnToMainMenu.Location = new System.Drawing.Point(12, 359);
+            this.btnReturnToMainMenu.Location = new System.Drawing.Point(447, 345);
             this.btnReturnToMainMenu.Name = "btnReturnToMainMenu";
-            this.btnReturnToMainMenu.Size = new System.Drawing.Size(131, 47);
+            this.btnReturnToMainMenu.Size = new System.Drawing.Size(183, 47);
             this.btnReturnToMainMenu.TabIndex = 0;
-            this.btnReturnToMainMenu.Text = "Return to Main Menu";
+            this.btnReturnToMainMenu.Text = "Cancel and Return to Menu";
             this.btnReturnToMainMenu.UseVisualStyleBackColor = true;
-            this.btnReturnToMainMenu.Click += new System.EventHandler(this.btnReturnToMainMenu_Click);
+            this.btnReturnToMainMenu.Click += new System.EventHandler(this.BtnReturnToMainMenu_Click);
             // 
             // tbCustomerName
             // 
-            this.tbCustomerName.Location = new System.Drawing.Point(137, 25);
+            this.tbCustomerName.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbCustomerName.Location = new System.Drawing.Point(210, 25);
+            this.tbCustomerName.MaximumSize = new System.Drawing.Size(300, 50);
+            this.tbCustomerName.MinimumSize = new System.Drawing.Size(250, 30);
             this.tbCustomerName.Name = "tbCustomerName";
-            this.tbCustomerName.Size = new System.Drawing.Size(203, 20);
+            this.tbCustomerName.Size = new System.Drawing.Size(250, 32);
             this.tbCustomerName.TabIndex = 1;
+            this.tbCustomerName.WordWrap = false;
             // 
             // tbDeskWidth
             // 
-            this.tbDeskWidth.Location = new System.Drawing.Point(137, 72);
+            this.tbDeskWidth.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbDeskWidth.Location = new System.Drawing.Point(210, 80);
+            this.tbDeskWidth.MaximumSize = new System.Drawing.Size(100, 50);
+            this.tbDeskWidth.MinimumSize = new System.Drawing.Size(100, 30);
             this.tbDeskWidth.Name = "tbDeskWidth";
-            this.tbDeskWidth.Size = new System.Drawing.Size(100, 20);
+            this.tbDeskWidth.Size = new System.Drawing.Size(100, 32);
             this.tbDeskWidth.TabIndex = 2;
+            this.tbDeskWidth.WordWrap = false;
+            this.tbDeskWidth.Validating += new System.ComponentModel.CancelEventHandler(this.TbDeskWidth_Validating);
             // 
             // tbDeskDepth
             // 
-            this.tbDeskDepth.Location = new System.Drawing.Point(137, 125);
+            this.tbDeskDepth.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbDeskDepth.Location = new System.Drawing.Point(210, 135);
+            this.tbDeskDepth.MaximumSize = new System.Drawing.Size(100, 50);
+            this.tbDeskDepth.MinimumSize = new System.Drawing.Size(100, 30);
             this.tbDeskDepth.Name = "tbDeskDepth";
-            this.tbDeskDepth.Size = new System.Drawing.Size(100, 20);
+            this.tbDeskDepth.Size = new System.Drawing.Size(100, 32);
             this.tbDeskDepth.TabIndex = 3;
+            this.tbDeskDepth.WordWrap = false;
+            this.tbDeskDepth.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TbDeskDepth_KeyPress);
+            this.tbDeskDepth.Validating += new System.ComponentModel.CancelEventHandler(this.TbDeskDepth_Validating);
             // 
             // cmbRushDays
             // 
+            this.cmbRushDays.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cmbRushDays.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cmbRushDays.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbRushDays.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbRushDays.FormattingEnabled = true;
-            this.cmbRushDays.Location = new System.Drawing.Point(137, 249);
+            this.cmbRushDays.Items.AddRange(new object[] {
+            "0",
+            "3",
+            "5",
+            "7"});
+            this.cmbRushDays.Location = new System.Drawing.Point(210, 298);
             this.cmbRushDays.Name = "cmbRushDays";
-            this.cmbRushDays.Size = new System.Drawing.Size(121, 21);
+            this.cmbRushDays.Size = new System.Drawing.Size(100, 33);
             this.cmbRushDays.TabIndex = 4;
             // 
             // cmbNumDrawers
             // 
+            this.cmbNumDrawers.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cmbNumDrawers.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cmbNumDrawers.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbNumDrawers.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbNumDrawers.FormattingEnabled = true;
-            this.cmbNumDrawers.Location = new System.Drawing.Point(137, 186);
+            this.cmbNumDrawers.Items.AddRange(new object[] {
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7"});
+            this.cmbNumDrawers.Location = new System.Drawing.Point(210, 190);
+            this.cmbNumDrawers.MaxDropDownItems = 24;
             this.cmbNumDrawers.Name = "cmbNumDrawers";
-            this.cmbNumDrawers.Size = new System.Drawing.Size(121, 21);
+            this.cmbNumDrawers.Size = new System.Drawing.Size(100, 33);
             this.cmbNumDrawers.TabIndex = 5;
             // 
             // lblCustomerName
             // 
             this.lblCustomerName.AutoSize = true;
+            this.lblCustomerName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCustomerName.Location = new System.Drawing.Point(31, 29);
             this.lblCustomerName.Name = "lblCustomerName";
-            this.lblCustomerName.Size = new System.Drawing.Size(82, 13);
+            this.lblCustomerName.Size = new System.Drawing.Size(147, 24);
             this.lblCustomerName.TabIndex = 6;
             this.lblCustomerName.Text = "Customer Name";
             // 
             // lblDeskWidth
             // 
             this.lblDeskWidth.AutoSize = true;
-            this.lblDeskWidth.Location = new System.Drawing.Point(31, 76);
+            this.lblDeskWidth.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDeskWidth.Location = new System.Drawing.Point(31, 85);
             this.lblDeskWidth.Name = "lblDeskWidth";
-            this.lblDeskWidth.Size = new System.Drawing.Size(63, 13);
+            this.lblDeskWidth.Size = new System.Drawing.Size(105, 24);
             this.lblDeskWidth.TabIndex = 7;
             this.lblDeskWidth.Text = "Desk Width";
             // 
             // lblDeskDepth
             // 
             this.lblDeskDepth.AutoSize = true;
-            this.lblDeskDepth.Location = new System.Drawing.Point(31, 129);
+            this.lblDeskDepth.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDeskDepth.Location = new System.Drawing.Point(31, 141);
             this.lblDeskDepth.Name = "lblDeskDepth";
-            this.lblDeskDepth.Size = new System.Drawing.Size(64, 13);
+            this.lblDeskDepth.Size = new System.Drawing.Size(107, 24);
             this.lblDeskDepth.TabIndex = 8;
             this.lblDeskDepth.Text = "Desk Depth";
             // 
             // lblNumDrawers
             // 
             this.lblNumDrawers.AutoSize = true;
-            this.lblNumDrawers.Location = new System.Drawing.Point(31, 190);
+            this.lblNumDrawers.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNumDrawers.Location = new System.Drawing.Point(31, 197);
             this.lblNumDrawers.Name = "lblNumDrawers";
-            this.lblNumDrawers.Size = new System.Drawing.Size(98, 13);
+            this.lblNumDrawers.Size = new System.Drawing.Size(173, 24);
             this.lblNumDrawers.TabIndex = 9;
             this.lblNumDrawers.Text = "Number of Drawers";
             // 
             // lblRushOrder
             // 
             this.lblRushOrder.AutoSize = true;
-            this.lblRushOrder.Location = new System.Drawing.Point(31, 253);
+            this.lblRushOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRushOrder.Location = new System.Drawing.Point(31, 303);
             this.lblRushOrder.Name = "lblRushOrder";
-            this.lblRushOrder.Size = new System.Drawing.Size(61, 13);
+            this.lblRushOrder.Size = new System.Drawing.Size(108, 24);
             this.lblRushOrder.TabIndex = 10;
             this.lblRushOrder.Text = "Rush Order";
             // 
-            // lblCustomerNameValidateMsg
+            // btnSaveQuote
             // 
-            this.lblCustomerNameValidateMsg.AutoSize = true;
-            this.lblCustomerNameValidateMsg.Location = new System.Drawing.Point(362, 32);
-            this.lblCustomerNameValidateMsg.Name = "lblCustomerNameValidateMsg";
-            this.lblCustomerNameValidateMsg.Size = new System.Drawing.Size(99, 13);
-            this.lblCustomerNameValidateMsg.TabIndex = 11;
-            this.lblCustomerNameValidateMsg.Text = "Validation Message";
+            this.btnSaveQuote.Location = new System.Drawing.Point(447, 292);
+            this.btnSaveQuote.Name = "btnSaveQuote";
+            this.btnSaveQuote.Size = new System.Drawing.Size(183, 47);
+            this.btnSaveQuote.TabIndex = 14;
+            this.btnSaveQuote.Text = "Save Quote and Return to Menu";
+            this.btnSaveQuote.UseVisualStyleBackColor = true;
+            this.btnSaveQuote.Click += new System.EventHandler(this.BtnSaveQuote_Click);
+            // 
+            // ErrProv_DeskQuote
+            // 
+            this.ErrProv_DeskQuote.ContainerControl = this;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(362, 75);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(31, 250);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(99, 13);
-            this.label1.TabIndex = 12;
-            this.label1.Text = "Validation Message";
+            this.label1.Size = new System.Drawing.Size(144, 24);
+            this.label1.TabIndex = 16;
+            this.label1.Text = "Surface Material";
             // 
-            // label2
+            // cmbSurfaceMaterial
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(362, 125);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(99, 13);
-            this.label2.TabIndex = 13;
-            this.label2.Text = "Validation Message";
-            // 
-            // btnSaveQuote
-            // 
-            this.btnSaveQuote.Location = new System.Drawing.Point(12, 306);
-            this.btnSaveQuote.Name = "btnSaveQuote";
-            this.btnSaveQuote.Size = new System.Drawing.Size(131, 47);
-            this.btnSaveQuote.TabIndex = 14;
-            this.btnSaveQuote.Text = "Save Quote";
-            this.btnSaveQuote.UseVisualStyleBackColor = true;
+            this.cmbSurfaceMaterial.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cmbSurfaceMaterial.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cmbSurfaceMaterial.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbSurfaceMaterial.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbSurfaceMaterial.FormattingEnabled = true;
+            this.cmbSurfaceMaterial.Items.AddRange(new object[] {
+            "Oak",
+            "Laminate",
+            "Pine",
+            "Rosewood",
+            "Veneer"});
+            this.cmbSurfaceMaterial.Location = new System.Drawing.Point(210, 243);
+            this.cmbSurfaceMaterial.MaxDropDownItems = 24;
+            this.cmbSurfaceMaterial.Name = "cmbSurfaceMaterial";
+            this.cmbSurfaceMaterial.Size = new System.Drawing.Size(100, 33);
+            this.cmbSurfaceMaterial.TabIndex = 15;
             // 
             // AddQuote
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(658, 418);
-            this.Controls.Add(this.btnSaveQuote);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.lblCustomerNameValidateMsg);
+            this.Controls.Add(this.cmbSurfaceMaterial);
+            this.Controls.Add(this.btnSaveQuote);
             this.Controls.Add(this.lblRushOrder);
             this.Controls.Add(this.lblNumDrawers);
             this.Controls.Add(this.lblDeskDepth);
@@ -196,6 +247,8 @@
             this.Controls.Add(this.btnReturnToMainMenu);
             this.Name = "AddQuote";
             this.Text = "AddQuote";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.AddQuote_FormClosing);
+            ((System.ComponentModel.ISupportInitialize)(this.ErrProv_DeskQuote)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -214,9 +267,9 @@
         private System.Windows.Forms.Label lblDeskDepth;
         private System.Windows.Forms.Label lblNumDrawers;
         private System.Windows.Forms.Label lblRushOrder;
-        private System.Windows.Forms.Label lblCustomerNameValidateMsg;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnSaveQuote;
+        private System.Windows.Forms.ErrorProvider ErrProv_DeskQuote;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox cmbSurfaceMaterial;
     }
 }

@@ -12,9 +12,16 @@ namespace MegaDesk_3_DustinCrossley
 {
     public partial class SearchAllQuotes : Form
     {
-        public SearchAllQuotes()
+        MainMenu frmMainMenu;
+        public SearchAllQuotes(MainMenu MainMenu)
         {
             InitializeComponent();
+            frmMainMenu = MainMenu;
+        }
+
+        private void SearchAllQuotes_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            frmMainMenu.Show();
         }
     }
 }

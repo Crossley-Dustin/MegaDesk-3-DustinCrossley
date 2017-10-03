@@ -42,7 +42,7 @@
             this.btnNewQuote.TabIndex = 0;
             this.btnNewQuote.Text = "Add New Quote";
             this.btnNewQuote.UseVisualStyleBackColor = true;
-            this.btnNewQuote.Click += new System.EventHandler(this.btnNewQuote_Click);
+            this.btnNewQuote.Click += new System.EventHandler(this.BtnNewQuote_Click);
             // 
             // btnViewQuotes
             // 
@@ -61,6 +61,7 @@
             this.btnSearchQuotes.TabIndex = 2;
             this.btnSearchQuotes.Text = "Search Quotes";
             this.btnSearchQuotes.UseVisualStyleBackColor = true;
+            this.btnSearchQuotes.Click += new System.EventHandler(this.BtnSearchQuotes_Click);
             // 
             // btnExit
             // 

@@ -1,21 +1,27 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MegaDesk_3_DustinCrossley
 {
     class DeskQuote
     {
-        private Desk Desk = new Desk();
+        
         public string CustomerName { get; set; }
         public RushDays RushOrderDays { get; set; }
-        private decimal _QuoteAmount { get; set; }
-        public DateTime _QuoteDate { get; set; }
 
+        private Desk Desk = new Desk();
+        private  decimal _QuoteAmount { get; set; }
+        private DateTime _QuoteDate { get; set; }
         private const decimal BASE_PRICE = 200;
         private const decimal PER_DRAWER_PRICE = 50;
+        
+        public const int MIN_WIDTH = 24;
+        public const int MAX_WIDTH = 96;
+        public const int MIN_DEPTH = 12;
+        public const int MAX_DEPTH = 48;
+        public const int MIN_DRAWERS = 0;
+        public const int MAX_DRAWERS = 7;
+        //public const int DEFAULT_PRODUCTION_DAYS = 14;
+
         //private const decimal 
 
         public decimal QuoteAmount {get { return _QuoteAmount; }}
@@ -29,19 +35,11 @@ namespace MegaDesk_3_DustinCrossley
             Seven = 7         
         }
 
-        public enum DrawerCount
+        public void CalculateDeskQuote(Desk DeskDetails)
         {
-            One = 1,
-            Two = 2,
-            Three = 3,
-            Four = 4,
-            Five = 5,
-            Six = 6,
-            Seven = 7
-        }
+            // Set desk details.
+            Desk = DeskDetails;
 
-        public void CalculateDeskQuote()
-        {
             // Updates the QuoteAmount and QuoteDate
             _QuoteAmount = BASE_PRICE + LargeDeskPrice() + DrawerPrice() + SurfacePrice() + RushOrderPrice();
             _QuoteDate = DateTime.Now;
